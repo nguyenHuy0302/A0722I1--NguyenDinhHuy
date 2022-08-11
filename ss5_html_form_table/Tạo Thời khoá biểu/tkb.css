@@ -1,0 +1,40 @@
+table{
+    width:100%;
+    border-collapse: collapse;
+}
+td, th {
+    padding: 20px;
+    border: 1px solid black;
+}
+h2{
+    text-align: center;
+    color: red;
+    font-size: 30px;
+
+}
+td{
+    font-family: " Lucian Grande", "Lucida Sans Unicode", Tahoma , sans-serif;
+    text-align: center;
+    color: black;
+    font-size: 20px;
+}
+th{
+    font-family: " Lucian Grande", "Lucida Sans Unicode", Tahoma , sans-serif;
+    color: black;
+    font-size: 25px ;
+    background-color: orangered;
+    border-color: aliceblue ;
+
+}
+h2:hover{
+    color: darkblue;
+}
+table:hover{
+    background-color: cadetblue;
+}
+tr:hover{
+    background-color: aliceblue;
+}
+td:hover{
+    background-color: aqua;
+}
