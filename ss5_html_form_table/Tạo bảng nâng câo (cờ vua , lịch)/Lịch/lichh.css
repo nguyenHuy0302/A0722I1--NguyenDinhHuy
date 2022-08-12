@@ -1,0 +1,44 @@
+h1{
+    text-align: left;
+    color: blue;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: " Lucian Grande", "Lucida Sans Unicode", Tahoma , sans-serif;
+}
+.tb1{
+    border: 1px solid white;
+    color: white;
+    background-color: orange;
+    width:935px;
+    height: 70px;
+    border-collapse: collapse;
+}
+td{
+    margin-right: 50px;
+}
+.date1 {
+    width: 70px;
+    border-collapse: collapse;
+
+}
+td{margin-right: 20px;
+    padding: 25x;
+    border: 50px solid silver;
+    width:15px;
+    height:15px;
+}
+.sat{
+    color: blue;
+}
+.sun{
+    color: red;
+}
+.table1 {
+    display: table;
+    border-collapse: separate;
+    box-sizing: border-box;
+    text-indent: initial;
+    border-spacing: 2px;
+    border-color: grey;
+    margin-right: auto;
+}
