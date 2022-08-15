@@ -9,7 +9,7 @@ h1{
     border: 1px solid white;
     color: white;
     background-color: orange;
-    width:935px;
+    width:620px;
     height: 70px;
     border-collapse: collapse;
 }
@@ -35,10 +35,13 @@ td{margin-right: 20px;
 }
 .table1 {
     display: table;
-    border-collapse: separate;
+    border-collapse: collapse;
     box-sizing: border-box;
     text-indent: initial;
     border-spacing: 2px;
     border-color: grey;
     margin-right: auto;
+}
+.thu{
+    color: ;
 }

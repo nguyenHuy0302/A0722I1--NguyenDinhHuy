@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo Js</title>
+</head>
+<body>
+<!--Sử dụng trực tiếp JS trong thẻ HTML-->
+<button onclick="alert('Đây là code JS trong HTML')">Click me!!</button>
+<p>Hello 1</p>
+<p id="hl2">Hello 2</p>
+<p id="hl3">Hello 3</p>
+<p>Hello 4</p>
+<p>Hello 5</p>
+<p>Hello 6</p>
+
+<!--<script src="myjs.js"></script>-->
+<script>
+    //Code JS trong thẻ <script>
+    alert("Đây là code JS trong cặp thẻ script");
+    confirm("Bạn có chắc chắn xóa thông tin này không");
+    prompt("Năm nay bạn bao nhiêu tuổi");
+    console.log("đây là màn hình console log");
+    document.write("Đây là document.write");
+    document.writeln("Đây là document.writeln");
+    document.getElementById("hl2").innerText = "Thay đổi giá trị của <b>hello2</b>";
+    document.getElementById("hl3").innerHTML = "Thay đổi giá trị của <b>hello3</b>";
+</script>
+
+<!--<script-->
+<!--        src="https://code.jquery.com/jquery-2.2.4.js"-->
+<!--        integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="-->
+<!--        crossorigin="anonymous"></script>-->
+</body>
+</html>
