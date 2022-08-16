@@ -3,42 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <title>MÁY TÍNH</title>
+
 </head>
 <body>
 <input type="number" id="firstNumber">
 <input type="number" id="secondNumber">
-<br> <br>
-<button onclick="add()">Addition(+)</button>
+<br>
+<br>
+
+<button class="cong" onclick="add()">Addition(+)</button>
 <button onclick="sub()" >Subtraction(-)</button>
 <button onclick="mul()" >Multiplication(x)</button>
 <button onclick="div()">Division(/)</button>
 <script>
-    function  add() {
+    function add() {
         var firstNumber = parseInt(document.getElementById("firstNumber").value);
         var secondNumber = parseInt(document.getElementById("secondNumber").value);
-        var result=firstNumber + secondNumber;
+        var result = firstNumber + secondNumber;
         alert(result);
     }
-    function  sub() {
-        var firstNumber = parseInt(document.getElementById("firstNumber").value);
-        var secondNumber = parseInt(document.getElementById("secondNumber").value);
-        var result=firstNumber - secondNumber;
+    function Sub() {
+        var firstNumber =parseInt(document.getElementById("firstNumber").value);
+        var secondNumber =parseInt(document.getElementById("secondNumber").value);
+        var result = firstNumber - secondNumber;
         alert(result);
-
     }
-    function  mul() {
-        var firstNumber = parseInt(document.getElementById("firstNumber").value);
-        var secondNumber = parseInt(document.getElementById("secondNumber").value);
-        var result=firstNumber * secondNumber;
+    function mul() {
+        var firstNumber =parseInt(document.getElementById("firstNumber").value);
+        var secondNumber =parseInt(document.getElementById("secondNumber").value);
+        var result= firstNumber * secondNumber;
         alert(result);
-
     }
-    function  div() {
+    function div() {
         var firstNumber = parseInt(document.getElementById("firstNumber").value);
         var secondNumber = parseInt(document.getElementById("secondNumber").value);
-        var result=firstNumber / secondNumber;
+        var result = firstNumber / secondNumber;
         alert(result);
-
     }
 </script>
 </body>
