@@ -11,6 +11,8 @@ function index_day() {
         case 4: case 6 : case 9: case 11:
             document.getElementById("result").innerText = "Tháng "+month+" có 30 ngày";
             break;
+        default:
+            document.getElementById("result").innerText= " Vui long nhap lai thang"
 
     }
 }

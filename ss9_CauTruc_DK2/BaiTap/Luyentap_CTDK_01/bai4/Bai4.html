@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let numa = parseInt(prompt(" Nhập số thứ nhất:"));
+    document.write(" "+numa+" , ");
+    let numb = parseInt(prompt(" Nhập số thứ hai:"));
+    document.write(" "+numb+" , ");
+    let numc = parseInt(prompt(" Nhập số thứ ba:"));
+    document.write(" "+numc+" ");
+    document.write("<br>");
+    document.write("----------------------------------------------------");
+
+    let max = numa;
+    if ((max < numb) || (max < numc)) {
+        if (numb > numc) {
+            document.write("<br>Max của 3 số là "+numb+" </<br>");
+        }
+        else {
+            document.write("<br>Max của 3 số là "+numc+" </br>");
+        }
+    }
+    else {
+        document.write("<br>Max của 3 số là "+numa+" </<br> ");
+    }
+</script>
+
+</body>
+</html>
