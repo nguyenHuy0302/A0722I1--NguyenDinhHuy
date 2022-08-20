@@ -12,7 +12,7 @@ function index_day() {
             document.getElementById("result").innerText = "Tháng "+month+" có 30 ngày";
             break;
         default:
-            document.getElementById("result").innerText= " Vui long nhap lai thang"
+            document.getElementById("result").innerText= " Vui lòng nhập lại tháng";
 
     }
 }

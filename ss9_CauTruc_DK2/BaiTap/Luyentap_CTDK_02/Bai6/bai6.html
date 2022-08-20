@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Phương trình bậc 1</title>
+</head>
+<body>
+<script>
+    let a =parseInt(prompt("nhập a :"));
+    let b =parseInt(prompt("nhap b :"));
+    if (a==0 && b==0){
+        document.write(" Phương trình vô số nghiệm ");
+
+    }
+    else if (a!=0 && b==0) {
+        document.write("Phương trình có nhiệm x=0");
+    }
+    else if(a==0 && b!=0){
+        document.write("phương trình vô nghiệm");
+    }
+    else{
+      document.write("phương trình có nghiệm "+ (-b/a));
+    }
+
+</script>
+
+</body>
+</html>
