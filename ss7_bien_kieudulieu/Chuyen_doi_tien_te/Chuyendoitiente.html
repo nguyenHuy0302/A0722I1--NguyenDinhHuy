@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chuyển đổi tiền tệ</title>
+</head>
+<body>
+<table>
+    <td>Amount
+        <input type="text" id="nhaptien">
+    </td>
+    <td>From Currenry
+        <select>
+            <option>VND</option>
+        </select>
+    </td>
+    <td>To Currenry
+        <select>
+            <option>USD</option>
+        </select>
+    </td>
+    <br><br>
+    <button onclick="convert()">chuyển đổi</button>
+    <p id="chuyendoitien"></p>
+</table>
+
+<script>
+    function convert()
+    {
+        let tien = document.getElementById('nhaptien').value;
+        let tigiausd = 23000;
+        let chuyendoitien = tien / tigiausd
+        document.getElementById("chuyendoitien").innerHTML = chuyendoitien
+    }
+</script>
+</body>
+</html>
