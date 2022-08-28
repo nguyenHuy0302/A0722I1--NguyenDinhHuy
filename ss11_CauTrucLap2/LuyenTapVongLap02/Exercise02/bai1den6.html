@@ -8,8 +8,8 @@
 <br><input type="button" value="Bai 1" onclick="bai_1()">Dãy Fibonacci</br>
 <br><input type="button" value="Bai 2" onclick="bai_2()">Tính giai thừa</br>
 <br><input type="button" value="Bai 3" onclick="bai_3()">In tam giác vuông</br>
-<br><input type="button" value="Bai 4" onclick="bai_4()"> </br>
-<br><input type="button" value="Bai 5" onclick="bai_5()"></br>
+<br><input type="button" value="Bai 4" onclick="bai_4()"> In tam giác</br>
+<br><input type="button" value="Bai 5" onclick="bai_5()">Lãi</br>
 <br><input type="button" value="Bai 6" onclick="bai_6()">Trái tim</br>
 <script>
 
@@ -64,6 +64,7 @@ function bai_3() {
         document.write("<br>");
         i++;
         }
+
     var i=5;
     while (i>=1){
         for(let x=1; x<=5-i; x++){
@@ -91,6 +92,19 @@ function bai_3() {
             document.write("<br>");
 
         }
+    }
+    function bai_5() {
+        let soTienBanDau = prompt("Nhập số tiền bạn muốn cho vay");
+        let laiSuatHangNam = prompt("nhập lại suất mong muốn");
+        let soNamChoVay = parseInt(prompt("Hãy nhập vào số năm bạn muốn  cho vay"));
+        let tienTuongLaiPhaiTra;
+        let tienLaiThuVe;
+        for (let i = 1; i <= soNamChoVay; i++) {
+            tienTuongLaiPhaiTra = soTienBanDau * (Math.pow((1 + laiSuatHangNam), i)); //10000*(1+0.1)^1
+            tienLaiThuVe = parseInt(tienTuongLaiPhaiTra - soTienBanDau);
+            document.write("Tiền lãi thu về năm thứ " + " " + i + " " + "là" + " " + tienLaiThuVe + "<br>");
+        }
+
     }
     function bai_6() {
         var m = 6;
