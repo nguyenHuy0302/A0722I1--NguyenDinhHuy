@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let radius = parseInt(prompt("Enter a radius !!"));
+    function getChuVi(r) {
+        return (2 * Math.PI * r).toFixed(2);
+
+    }
+    function getDienTich(r){
+        return (Math.PI * r * r).toFixed(2);
+    }
+    document.write("Chu vi hinh tron la :" + getChuVi(radius)+ "<br>" );
+    document.write("Dien tich hinh tron la :" +getDienTich(radius));
+
+</script>
+</body>
+</html>
