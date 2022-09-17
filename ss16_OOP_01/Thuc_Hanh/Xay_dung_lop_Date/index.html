@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //XÂY DỰNG LỚP MYDATE VS PHƯƠNG THỨC CÓ 3 THAM SỐ TRUYỀN VÀO..
+    let MyDate = function ( day , month , year) {
+        this.day = day;
+        this.month = month;
+        this.year = year;
+    };
+    // XÂY DỰNG PHƯƠNG THƯC TRẢ VỀ , NGÀY , THÁNG , NĂM
+    this.getDay = function () {
+      return this.day;
+    }
+    this.getMonth = function(){
+        return this.month;
+    }
+    this.getYear = function () {
+        return this.year ;
+    }
+    // XAY DUNG PHUONG THUC THIET DAT GIA TRI CAC THUOC TINH
+    this.setDay = function (day) {
+      this.day = day;
+    }
+    this.setMonth = function (month) {
+        this.month = month;
+    }
+    this.setYear = function (year) {
+        this.year = year;
+    }
+    // SU DUNG LOP VUA TAO ;;; EX: TAO DOI TUONG NGAY 2 THANG 2 NAM 2022
+    let date = new MyDate(2,2,2022);
+    // tru cap phuong thuc cua lop date :
+    let day = date.getDate (); //2
+    let month = date.getDate();//2
+    let year = date.getYear();//2022
+    //b6 hieenr thi daz, month , year
+    alert(day + "/"+ month+"/"+year);
+    date.setDay(10);
+    date.setMonth(10);
+    date.setYear(2019);
+    alert(day + "/" + month + "/" + year);
+</script>
+</body>
+</html>

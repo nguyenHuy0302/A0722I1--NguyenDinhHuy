@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="button" value="bài 1" onclick="bai_1()">Hình chữ nhật rỗng</br>
+<input type="button" value="bài 2" onclick="bai_2()">Tam giác vuông rỗng</br>
+<input type="button" value="bài 3" onclick="bai_3()">Tam giác cân đặc</br>
+<input type="button" value="bài 4" onclick="bai_4()">Tam giác cân rỗng có chiều cao h</br>
+<script>
+function bai_1() {
+    for(let i= 1; i<=4 ; i++){
+        for (let j=1 ; j<=5 ; j++){
+            if( i===1 || i === 4 || j === 1 ||j === 5){
+                document.write("*");
+            }
+            else{
+                document.write("&nbsp;&nbsp;");
+            }
+        }
+        document.write("<br>");
+    }
+}
+function bai_2() {
+    var i=5;
+    var h =1 ;
+    for (let i=1 ; i<=5 ; i++){
+        while (i<h){
+
+        }
+    }
+}
+function bai_3() {
+    var i = 1;
+    var h = 5;
+    while (i <= 5) {
+        for (let x = i; x <= h - 1; x++) {
+            document.write("&nbsp;&nbsp;");
+        }
+        for (let y = 1; y <= 2 * i - 1; y++) {
+            document.write("*");
+        }
+        document.write("<br>");
+        i++;
+    }
+}
+</script>
+</body>
+</html>

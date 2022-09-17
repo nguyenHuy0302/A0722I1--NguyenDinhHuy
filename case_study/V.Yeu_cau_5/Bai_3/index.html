@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // const m = parseInt(prompt('Nhập số m: '));
+    // const n = parseInt(prompt('Nhập số n: '));
+    // let arr = [];
+    // for(let i=0; i<m; i++){
+    //     for(let x=0; x<n; x++) {
+    //         const z = parseInt(prompt('Nhập số: A['+i+','+x+']:'));
+    //         arr.push(z);
+    //     }
+    // }
+    // document.write('Max: ',Math.max(...arr));
+    // document.write('Min: ',Math.min(...arr));
+
+    var m = parseInt(prompt("Nhap m :"));
+    var n = parseInt(prompt("Nhap n :"));
+    var arr =[];
+    for (let i=0 ; i<m ; i++){
+        arr[i] =[];
+        for (let j =0 ; j<n ; j++){
+            arr[i][j] = parseInt(prompt("Nhap A["+i+"]["+j+"] "));
+        }
+    }
+    var max = arr[0][0];
+    var min = arr[0][0];
+    for (let i=0 ; i<m ; i++)
+        for (let j = 0; j < n; j++) {
+           if (arr[i][j]>max) max=arr[i][j];
+            if (arr[i][j]<min) min=arr[i][j];
+    }
+document.write("Max la :"+max  +"<br>"+  "Min la :"+min);
+
+
+</script>
+
+</body>
+</html>
