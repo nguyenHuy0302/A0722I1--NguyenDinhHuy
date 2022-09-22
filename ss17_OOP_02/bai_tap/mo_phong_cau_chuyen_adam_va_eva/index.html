@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mô phỏng câu chuyện của adam và eva</title>
+</head>
+<body>
+<script>
+    class Apple{
+        constructor(weight) {
+            this.weight = weight;
+        }
+        decreaseWeight(){
+            if (this.weight >0){
+                this.weight--;
+            }
+        }
+        isEmpty(){
+            if(this.weight === 0){
+                return true;
+            }else{
+                return false;
+            }
+        }
+        getWeight(){
+            return this.weight;
+        }
+    }
+
+
+    class Human{
+        constructor(name , gender , weight) {
+            this.name = name;
+            this.gender =gender;
+            this.weight= weight;
+        }
+        getName(){
+            return this.name;
+        }
+        setName(name){
+            this.name = name;
+        }
+
+        getGender(){
+            return this.gender;
+        }
+        setGender(gender){
+            this.gender = gender;
+        }
+
+        getWeight(){
+            return this.weight;
+        }
+        setWeight(weight){
+            this.weight= weight;
+        }
+
+        say(str){
+          console.log(str);
+        }
+        eat(apple){
+            if (apple.getWeight()>0){
+                this.weight++;
+                apple.decreaseWeight();
+            }else{
+                console.log(" tao da an het");
+            }
+        }
+        checkapple(apple){
+            return apple.getWeight();
+        }
+       isMale(){
+            if (this.gender === "Male"){
+                return true;
+            }else{
+                return  false;
+            }
+       }
+    }
+let apple = new Apple(10);
+   adam.eat(1);
+    let adam = new Human("Adam","Male","20");
+    let eva = new Human("Eva ","Female","21");
+
+
+
+</script>
+
+</body>
+</html>
