@@ -13,10 +13,14 @@ public class check_prime {
             int i =2;
             boolean check =  true ;
             while (i<Math.sqrt(number)){
-                if (i%2==0){
-
-
+                if (i%1==0){
+                    check = false;
                 }
+                i++;
+            }
+            if (check) System.out.println(number+" is on a prime ");
+            else{
+                System.out.println(number+" is not a prime");
             }
         }
 
