@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+   let slary = parseInt(prompt(" Nhập số lương : (triệu)  !!"));
+   let thue;
+   if (slary >15){
+       thue= slary * 20/100;
+   }else if (slary>7 && slary<15){
+       thue = slary * 10/100;
+   }else if (slary<7){
+       thue= slary *5/100;
+   }
+document.write("Thuế "+thue);
+document.write("<br>");
+document.write("Lương của bạn là:  "+(slary-thue) +" Triệu");
+</script>
+</body>
+</html>

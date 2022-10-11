@@ -1,0 +1,60 @@
+h1{
+    text-align: center;
+    color: black;
+}
+body{
+    padding: 50px;
+}
+table{
+    width:100%;
+    border-collapse: collapse;
+}
+td, th {
+    padding: 20px;
+    border: 1px solid black;
+}
+th{
+    background-color: yellow;
+}
+/*label1{*/
+/*    color: blue;*/
+/*}*/
+/*label2{*/
+/*    color:red;*/
+/*    margin-length: 50px;*/
+/*}*/
+body{
+    padding: 50px;
+}
+table{
+    width:100%;
+    border-collapse: collapse;
+}
+td,th{
+    padding: 10px;
+    border: 1px solid black;
+    color:black;
+
+}
+h2{
+    text-align: center;
+    font-size: 30px;
+    color: darkblue;
+}
+pre{
+    font-family: " Lucian Grande", "Lucida Sans Unicode", Tahoma , sans-serif;
+    font-size:15px;
+    color:blue;
+}
+.rong{
+    background-color: aliceblue;
+
+}
+.t2{
+    text-align: center;
+    background-color: orange ;
+    font-weight: bold;
+}
+h2:hover{
+    color:red;
+}

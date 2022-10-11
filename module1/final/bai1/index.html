@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    let soLuong;
+    do {
+        soLuong = parseInt(prompt("Nhập số lương mảng"));
+    } while (soLuong > 50);
+
+    let inputArray = new Array(soLuong);
+    for (let i = 0; i < soLuong; i++) {
+        inputArray[i] = parseInt(prompt('Nhập Phần Tử  A[' + i + ']: '));
+    }
+    document.write("Mảng vừa nhập là :");
+    document.write(inputArray.join());
+    document.write("<br>");
+
+    let resultArray = new Array();
+    for (let i = 0; i < soLuong; i++) {
+        if (checkNt(inputArray[i])) {
+            resultArray.push(inputArray[i]);
+        }
+    }
+    if (resultArray.length != 0) {
+        document.write("Mảng có các số nguyên tố là : ");
+        document.write(resultArray.join());
+    }else
+        document.write("Không có số nguyên tố nào !");
+
+    function checkNt(x) {
+        let count = 0;
+        for (let i = 0; i <= x; i++)
+            if (x % i === 0) count++;
+        return count === 2;
+    }
+
+
+</script>
+</body>
+</html>

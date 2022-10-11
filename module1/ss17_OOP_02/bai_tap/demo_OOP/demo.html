@@ -1,0 +1,207 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Title</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--<center>-->
+<!--    <h4>Quản lý công nhân</h4>-->
+<!--    <p id="hienThi"></p>-->
+<!--    <script>-->
+<!--        class CongNhan {-->
+<!--            constructor(hoTen, ngaySinh, diaChi, luong, chucVu) {-->
+<!--                this.hoTen = hoTen;-->
+<!--                this.ngaySinh = ngaySinh;-->
+<!--                this.diaChi = diaChi;-->
+<!--                this.luong = luong;-->
+<!--                this.chucVu = chucVu;-->
+<!--            }-->
+
+<!--            getHoTen() {-->
+<!--                return this.hoTen;-->
+<!--            }-->
+
+<!--            getNgaySinh() {-->
+<!--                return this.ngaySinh;-->
+<!--            }-->
+
+<!--            getDiaChi() {-->
+<!--                return this.diaChi;-->
+<!--            }-->
+
+<!--            getLuong() {-->
+<!--                return this.luong;-->
+<!--            }-->
+
+<!--            getChucVu() {-->
+<!--                return this.chucVu;-->
+<!--            }-->
+
+<!--            setHoTen(hoTen) {-->
+<!--                this.hoTen = hoTen;-->
+<!--            }-->
+
+<!--            setNgaySinh(ngaySinh) {-->
+<!--                this.ngaySinh = ngaySinh;-->
+<!--            }-->
+
+<!--            setLuong(luong){-->
+<!--                this.luong = luong;-->
+<!--            }-->
+
+<!--            setDiaChi(diaChi){-->
+<!--                this.diaChi = diaChi;-->
+<!--            }-->
+
+<!--            setChucVu(chucVu){-->
+<!--                this.chucVu = chucVu;-->
+<!--            }-->
+
+<!--        }-->
+
+<!--        let listCongNhan = [];-->
+<!--        listCongNhan.push(new CongNhan("Trương Tấn A","11-11-1997","Quảng Nam",2000,"Abc"));-->
+<!--        listCongNhan.push(new CongNhan("Trương Tấn B","11-11-1998","Đà Nẵng",2000,"Abc"));-->
+<!--        listCongNhan.push(new CongNhan("Trương Tấn C","11-11-1999","Huế",2000,"Abc"));-->
+
+<!--        function hienThi(danhSach) {-->
+<!--            let tabeString = '<table border="1">' +-->
+<!--                '<tr>' +-->
+<!--                '<td>STT</td>' +-->
+<!--                '<td>Họ và tên</td>' +-->
+<!--                '<td>Ngày sinh</td>' +-->
+<!--                '<td>Địa chỉ</td>' +-->
+<!--                '<td>Lương</td>' +-->
+<!--                '<td>Chức vụ</td>' + '</tr>'-->
+<!--            for(let i=0; i<danhSach.length; i++){-->
+<!--                tabeString += '<tr>' +-->
+<!--                    '<td>' + (i+1) + '</td>' +-->
+<!--                    '<td>' + danhSach[i].getHoTen() + '</td>' +-->
+<!--                    '<td>' +  danhSach[i].getNgaySinh() + '</td>' +-->
+<!--                    '<td>' +  danhSach[i].getDiaChi() + '</td>' +-->
+<!--                    '<td>' +  danhSach[i].getLuong() + '</td>' +-->
+<!--                    '<td>' +  danhSach[i].getChucVu() + '</td>' + '</tr>'-->
+<!--            }-->
+<!--            document.getElementById("hienThi").innerHTML = tabeString;-->
+<!--        }-->
+<!--        hienThi(listCongNhan);-->
+<!--    </script>-->
+<!--</center>-->
+<!--</body>-->
+
+<!--<style>-->
+<!--    *{-->
+<!--        font-family: arial, sans-serif;-->
+<!--    }-->
+<!--    table {-->
+<!--        border-collapse: collapse;-->
+<!--        width: 50%;-->
+<!--    }-->
+
+<!--    td, th {-->
+<!--        border: 1px solid #dddddd;-->
+<!--        text-align: left;-->
+<!--        padding: 8px;-->
+<!--    }-->
+
+<!--    tr:nth-child(even) {-->
+<!--        background-color: #dddddd;-->
+<!--    }-->
+<!--</style>-->
+<!--</html>-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="display"></p>
+</body>
+</html>
+<script>
+    class Students {
+        constructor(name, age, email) {
+            this.name = name;
+            this.age = age;
+            this.email = email;
+        }
+
+        getName() {
+            return this.name;
+        }
+
+        getAge() {
+            return this.age;
+        }
+
+        getEmail() {
+            return this.email;
+        }
+
+        // setName(newName) {
+        //     this.name = newName;
+        // }
+        //
+        // setAge(newAge) {
+        //     this.age = newAge;
+        // }
+        //
+        // setEmail(newEmail) {
+        //     this.email = newEmail;
+        // }
+    }
+
+    let studentA = new Students('Cong', 50, 'cong@codegym.vn');
+    let studentB = new Students('Trung', 40, 'trung@codegym.vn');
+    let arr = [studentA, studentB];
+
+    function display() {
+        str = '<table border="1px">\n' +
+            '<tr>\n' +
+            '<th>Name</th>\n' +
+            '<th>Age</th>\n' +
+            '<th>Email</th>\n' +
+            '<th>More</th>\n' +
+            '</tr>\n';
+        for (let i = 0; i < arr.length; i++) {
+            str +=
+                '<tr>\n' +
+                '<td>' + arr[i].getName() + '</td>\n' +
+                '<td>' + arr[i].getAge() + '</td>\n' +
+                '<td>' + arr[i].getEmail() + '</td>\n' +
+                '<td>' +
+                '<button onclick="edit(' + i + ' )">Edit</button>' +
+                '<button onclick="remove(' + i + ' )">Remove</button>' +
+                '</td>\n' +
+                '</tr>\n'
+        }
+        str += '</table>'
+        document.getElementById('display').innerHTML = str;
+    }
+
+    display();
+
+    function edit(value) {
+        alert(value);
+        let newName = prompt('enter the name');
+        let newAge = prompt('enter the age');
+        let newEmail = prompt('enter the email');
+        // arr[value].setName(newName);
+        // arr[value].setAge(newAge);
+        // arr[value].setEmail(newEmail);
+        let newStudent = new Students(newName, newAge, newEmail)
+        arr[value] = newStudent;
+        display();
+    }
+
+    function remove(value) {
+        if (confirm('do you wanna remove it')) {
+            arr.splice(value, 1);
+        }
+        display();
+    }
+</script>
+</html>

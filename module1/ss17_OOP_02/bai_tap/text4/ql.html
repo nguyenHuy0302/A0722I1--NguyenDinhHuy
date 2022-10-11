@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<center>
+    <h4>Quản lý công nhân</h4>
+    <p id="hienThi"></p>
+</center>
+</body>
+    <script>
+        class CongNhan {
+            constructor(hoTen, ngaySinh, diaChi, luong, chucVu) {
+                this.hoTen = hoTen;
+                this.ngaySinh = ngaySinh;
+                this.diaChi = diaChi;
+                this.luong = luong;
+                this.chucVu = chucVu;
+            }
+
+
+            getHoTen() {
+                return this.hoTen;
+            }
+
+            getNgaySinh() {
+                return this.ngaySinh;
+            }
+
+            getDiaChi() {
+                return this.diaChi;
+            }
+
+            getLuong() {
+                return this.luong;
+            }
+
+            getChucVu() {
+                return this.chucVu;
+            }
+
+            // setHoTen(newHoTen) {
+            //     this.hoTen = newHoTen;
+            // }
+            //
+            // setNgaySinh(newNgaySinh) {
+            //     this.ngaySinh = newNgaySinh;
+            // }
+            //
+            // setLuong(newLuong){
+            //     this.luong = newLuong;
+            // }
+            //
+            // setDiaChi(newDiaChi){
+            //     this.diaChi = newDiaChi;
+            // }
+            //
+            // setChucVu(newChucVu){
+            //     this.chucVu = newChucVu;
+            // }
+
+        }
+
+        let listCongNhan = [];
+        listCongNhan.push(new CongNhan("Trương Tấn A","11-11-1997","Quảng Nam",2000,"Abc"));
+        listCongNhan.push(new CongNhan("Trương Tấn B","11-11-1998","Đà Nẵng",2000,"Abc"));
+        listCongNhan.push(new CongNhan("Trương Tấn C","11-11-1999","Huế",2000,"Abc"));
+
+
+        function hienThi() {
+            let tabeString = '<table border="1">' +
+                '<tr>' +
+                '<td>STT</td>' +
+                '<td>Họ và tên</td>' +
+                '<td>Ngày sinh</td>' +
+                '<td>Địa chỉ</td>' +
+                '<td>Lương</td>' +
+                '<td>Chức vụ</td>' + '</tr>'
+            for(let i=0; i<listCongNhan.length; i++){
+                tabeString += '<tr>' +
+                    '<td>' + (i+1) + '</td>' +
+                    '<td>' + listCongNhan[i].getHoTen() + '</td>' +
+                    '<td>' +  listCongNhan[i].getNgaySinh() + '</td>' +
+                    '<td>' +  listCongNhan[i].getDiaChi() + '</td>' +
+                    '<td>' +  listCongNhan[i].getLuong() + '</td>' +
+                    '<td>' +  listCongNhan[i].getChucVu() + '</td>' +
+                    '<td>' +
+                    '<button onclick="edit(' + i + ' )">Edit</button>' +
+                    '<button onclick="remove(' + i + ' )">Remove</button>' +
+                    '</td>\n' +
+
+                    '</tr>'
+            }
+            document.getElementById("hienThi").innerHTML = tabeString;
+        }
+        hienThi(listCongNhan);
+
+        function edit(value) {
+            alert(value);
+            let newHoTen = prompt(' nhap ten');
+            let newNgaySinh = prompt(' nhap ngay sinh');
+            let newDiaChi = prompt('nhap dia chi');
+            let newLuong = prompt(' nhap luong');
+            let newChucVu = prompt(' nhap chuc vu');
+
+            // arr[value].setName(newName);
+            // arr[value].setAge(newAge);
+            // arr[value].setEmail(newEmail);
+            let newcongnhan =new CongNhan (newHoTen,newNgaySinh,newDiaChi,newLuong,newChucVu);
+            listCongNhan[value] = newcongnhan;
+            hienThi(listCongNhan);
+        }
+        function remove(value) {
+            if (confirm('do you wanna remove it')) {
+                listCongNhan.splice(value, 1);
+            }
+            hienThi(listCongNhan);
+        }
+    </script>
+
+</body>
+
+<style>
+    *{
+        font-family: arial, sans-serif;
+    }
+    table {
+        border-collapse: collapse;
+        width: 50%;
+    }
+
+    td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    }
+</style>
+</html>

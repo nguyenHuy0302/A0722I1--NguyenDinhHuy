@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    let soLuong ;
+    do {
+        soLuong = parseInt(prompt(" Nhap so luong "));
+    }while (soLuong>50);
+    let inputArray = new Array(soLuong);
+    for (let i = 0; i < soLuong; i++) {
+        inputArray[i] = parseInt(prompt('Nhập Phần Tử  A[' + i + ']: '));
+    }
+    document.write("Mảng vừa nhập là :");
+    document.write(inputArray.join());
+    document.write("<br>");
+
+
+    let resultArray = new Array();
+    for (let i = 0; i < soLuong; i++) {
+        if (dem(inputArray[i])) {
+            resultArray.push(inputArray[i]);
+        }
+    }
+
+    // function Sum(x) {
+    //     let count =0;
+    //     let soLe =[0];
+    //      for (let i=1 ; i<x; i++){
+    //          if( x%1==0  ){
+    //              soLe = soLuong[i];
+    //              count++;
+    //          }
+    //          document.write("so luong :"+soLe);
+    //          document.write("<br>");
+    //      }
+    //  }
+    // function dem(x){
+    // let sum =0;
+    // let average =0;
+    // let count=0;
+    // for (i=0;i<=x;i+2){
+    //     if (x%1 ==0){
+    //         sum += x ;
+    //         count++;
+    //     }
+    //
+    //
+    //
+    // }
+    // document.writeln(" Có "+count+" số lẻ");
+    // }
+
+
+
+</script>
+
+</body>
+</html>

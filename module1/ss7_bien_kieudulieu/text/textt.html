@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo Js</title>
+</head>
+<body>
+<!--Sử dụng trực tiếp JS trong thẻ HTML-->
+
+<!--<button onclick="alert('Đây là code JS trong HTML')">Click me!!</button>-->
+<!--<p>Hello 1</p>-->
+<!--<p id="hl2">Hello 2</p>-->
+<!--<p id="hl3">Hello 3</p>-->
+<!--<p>Hello 4</p>-->
+<!--<p>Hello 5</p>-->
+<!--<p>Hello 6</p>-->
+
+<!--<script src="myjs.js"></script>-->
+<script language="javascript">
+    // //Code JS trong thẻ <script>
+    // alert("Đây là code JS trong cặp thẻ script");
+    // confirm("Bạn có chắc chắn xóa thông tin này không");
+    // prompt("Năm nay bạn bao nhiêu tuổi");
+    // console.log("đây là màn hình console log");
+    // document.write("Đây là document.write");
+    // document.writeln("Đây là document.writeln");
+    // document.getElementById("hl2").innerText = "Thay đổi giá trị của <b>hello2</b>";
+    // document.getElementById("hl3").innerHTML = "Thay đổi giá trị của <b>hello3</b>";
+
+    // let i=1;
+    // while (i<100){
+    //     document.write("<hr width=" + i +"%>");
+    //     i++;
+    //}
+
+        let sout, i, j;
+    sout = "<table border='1' width='300' cellspacing='0' cellpadding='3'>";
+    i = j = 1;
+    while (i <= 10) {
+        sout = sout + "<tr>";
+        while (j <= 10) {
+            sout = sout + "<td>" + i * j + "</td>";
+            j++;
+        }
+        sout = sout + "</tr>";
+        j = 1;
+        i++;
+    }
+    sout = sout + "</table>";
+    document.write(sout);
+</script>
+</body>
+</html>
+<!--<script-->
+<!--        src="https://code.jquery.com/jquery-2.2.4.js"-->
+<!--        integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="-->
+<!--        crossorigin="anonymous"></script>-->
+
+<!--<script>-->
+<!--    function  add() {-->
+<!--        var firstNumber = parseInt(document.getElementById("firstNumber").value);-->
+<!--        var secondNumber = parseInt(document.getElementById("secondNumber").value);-->
+<!--        var result=firstNumber + secondNumber;-->
+<!--        alert(result);-->
+<!--    }-->
+<!--    function  sub() {-->
+<!--        var firstNumber = parseInt(document.getElementById("firstNumber").value);-->
+<!--        var secondNumber = parseInt(document.getElementById("secondNumber").value);-->
+<!--        var result=firstNumber - secondNumber;-->
+<!--        alert(result);-->
+
+<!--    }-->
+<!--    function  mul() {-->
+<!--        var firstNumber = parseInt(document.getElementById("firstNumber").value);-->
+<!--        var secondNumber = parseInt(document.getElementById("secondNumber").value);-->
+<!--        var result=firstNumber * secondNumber;-->
+<!--        alert(result);-->
+
+<!--    }-->
+<!--    function  div() {-->
+<!--        var firstNumber = parseInt(document.getElementById("firstNumber").value);-->
+<!--        var secondNumber = parseInt(document.getElementById("secondNumber").value);-->
+<!--        var result=firstNumber / secondNumber;-->
+<!--        alert(result);-->
+
+<!--    }-->

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>pt bậc 2</title>
+</head>
+<body>
+   <script>
+       let a =parseInt(prompt("nhập số a"));
+       let b =parseInt(prompt("nhập số b"));
+       let c =parseInt(prompt("nhập số c"));
+       let delta =b*b-4*a*c;
+       if(delta < 0){
+           document.write("Phưởng trình vô nghiệm:");
+       }
+       else if( delta===0 ){
+           document.write("Phương trình có nghiệm kép "+ (-b/ (2*a) ));
+       }
+       else {
+           document.write(" Phương trình có 2 nghiệm x1 ="+((Math.sqrt(Math.abs(delta))-b)/(2*a)));
+           document.write(" và "+((-1*b+Math.sqrt(Math.abs(delta)))/(2*a)));
+       }
+   </script>
+
+</body>
+</html>

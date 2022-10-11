@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<center>
+<body>
+<h1>QUẢN LÍ SÁCH</h1>
+<p id ="hienThi"></p>
+<div class="col-sm-6"><button class="btn btn-success" onclick="add()">Thêm sách đã có</button></div>
+</center>
+ <script>
+     class Sach {
+         constructor(maSoSach , tenSach , namXuatBan, soQuyen , tinhTrang) {
+             this.maSoSach = maSoSach;
+             this.tenSach = tenSach;
+             this.namXuatBan =namXuatBan;
+             this.soQuyen = soQuyen;
+             this.tinhTrang = tinhTrang;
+         }
+         getMaSoSach(){
+             return this.maSoSach;
+         }
+         getTenSach(){
+             return this.tenSach;
+         }
+         getNamXuatBan(){
+             return this.namXuatBan;
+         }
+         getSoQuyen(){
+             return this.soQuyen;
+         }
+         getTinhTrang(){
+             return this.tinhTrang;
+         }
+
+     }
+     let arr =[];
+     arr.push(new Sach(12345,"Toan",2000,3,"True",));
+     arr.push(new Sach(23456,"Van",1998,4,"True",));
+     arr.push(new Sach(37456,"Tieng Anh",1999,4,"False",));
+     function hienThi() {
+         let tabeString = '<table border="1">' +
+             '<tr>' +
+             '<td>STT</td>' +
+             '<td>Mã số sách</td>' +
+             '<td>Tên Sách</td>' +
+             '<td>Năm xuất bản</td>' +
+             '<td>Số Quyển</td>' +
+             '<td>Tình Trạng</td>' + '</tr>'
+         for (let i = 0; i < arr.length; i++) {
+             tabeString += '<tr>' +
+                 '<td>' + (i + 1) + '</td>' +
+                 '<td>' + arr[i].getMaSoSach() + '</td>' +
+                 '<td>' + arr[i].getTenSach() + '</td>' +
+                 '<td>' + arr[i].getNamXuatBan() + '</td>' +
+                 '<td>' + arr[i].getSoQuyen() + '</td>' +
+                 '<td>' + arr[i].getTinhTrang() + '</td>' +
+                 '</tr>'
+         }
+         document.getElementById("hienThi").innerHTML = tabeString;
+     }
+         hienThi(arr);
+     function add(){
+         let taoMaSoSach = prompt('Nhập ma so sach :');
+         let taoTenSach = prompt('Nhập ten sach:');
+         let taoNamXb = prompt('Nhập nam :');
+         let taoSoQuyen = prompt('nhap so quyen');
+         let taoTinhTrang = prompt('nhap tinh trang ');
+
+
+         let newThem = new Sach( taoMaSoSach,taoTenSach , taoNamXb , taoSoQuyen, taoTinhTrang);
+         arr.push(newThem);
+         hienThi(arr);
+     }
+ </script>
+<style>
+    *{
+        font-family: arial, sans-serif;
+    }
+    table {
+        border-collapse: collapse;
+        width: 50%;
+    }
+
+    td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 20px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    }
+</style>
+</body>
+</html>

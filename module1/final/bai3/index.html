@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<center>
+   <h1> SO TIET KIEM</h1>
+   <p id="hienThi" ></p>
+    <div class="col-sm-6"><button class="btn btn-success" onclick="add()">Thêm</button></div>
+</center>
+<script>
+       class SoTietKiem {
+           constructor( maSo , loaiTietKiem , hoTen , chungMinh , ngayMoSo , soTienGui) {
+               this.maSo = maSo;
+               this.loaiTietKiem = loaiTietKiem;
+               this.hoTen = hoTen;
+               this.chungMinh= chungMinh;
+               this.ngayMoSo = ngayMoSo;
+               this.soTienGui = soTienGui;
+           }
+           getMaSo(){
+               return this.maSo;
+           }
+           getLoaiTietKiem(){
+               return this.loaiTietKiem;
+           }
+           getHoTen(){
+               return this.hoTen;
+           }
+           getChungMinh(){
+               return this.chungMinh;
+           }
+           getNgayMoSo(){
+               return this.ngayMoSo;
+           }
+           getSoTienGui(){
+               return this.soTienGui;
+           }
+           // setMaSo(MaSo){
+           //     this.maSo =MaSo
+           // }
+           // setLoaiTietKiem(LoaiTietKiem){
+           //     this.loaiTietKiem= LoaiTietKiem;
+           // }
+           // setHoTen(HoTen) {
+           //          this.hoTen =HoTen;
+           //      }
+           //      setChungMinh(ChungMinh){
+           //      this.chungMinh = ChungMinh;
+           //      }
+           //      setNgayMoSo(NgayMoSo){
+           //     this.ngayMoSo = NgayMoSo;
+           //      }
+           //      setSoTienGui(SoTienGui){
+           //     this.soTienGui= SoTienGui;
+           //      }
+       }
+       let arr =[];
+       arr.push(new SoTietKiem("001","VIP","Nguyen Van A",1111111,"03/10/2022",300000));
+       arr.push(new SoTietKiem("001","VIP","Nguyen Van B",222222,"23/11/2022",500000));
+
+       function hienThi() {
+           let tabeString = '<table border="1">' +
+               '<tr>' +
+               '<td>STT</td>' +
+               '<td>Mã sổ</td>' +
+               '<td>Loại tiết kiệm</td>' +
+               '<td>Họ tên khách hàng</td>' +
+               '<td>Chứng minh nhân dân</td>' +
+               '<td>Ngày mở sổ</td>' +
+               '<td>Số tiền gửi</td>' + '</tr>'
+           for(let i=0; i<arr.length; i++){
+               tabeString += '<tr>' +
+                   '<td>' + (i+1) + '</td>' +
+                   '<td>' + arr[i].getMaSo() + '</td>' +
+                   '<td>' +  arr[i].getLoaiTietKiem() + '</td>' +
+                   '<td>' +  arr[i].getHoTen() + '</td>' +
+                   '<td>' +  arr[i].getChungMinh() + '</td>' +
+                   '<td>' +  arr[i].getNgayMoSo() + '</td>' +
+                   '<td>' +  arr[i].getSoTienGui()+ '</td>'+
+                   '<td>' +
+                   '<button onclick="edit(' + i + ' )">Edit</button>' +
+                   '<button onclick="remove(' + i + ' )">Remove</button>' +
+                   '</td>\n' +
+
+                   '</tr>'
+           }document.getElementById("hienThi").innerHTML = tabeString;
+       }
+       hienThi(arr);
+       function remove(value) {
+           if (confirm('Bạn có chắc chắn xoá không !! ')) {
+               arr.splice(value, 1);
+           }
+           hienThi(arr);
+       }
+       function edit(value) {
+           alert(value);
+           let newMaSo = prompt(' nhập mã số');
+           let newLoaiTietKiem = prompt(' nhập loại');
+           let newHoTen = prompt('nhap tên');
+           let newChungMinh = prompt(' nhaạp chứng minh');
+           let newNgayMoSo = prompt(' nhap ngày mở sổ');
+           let newSoTienGui =prompt(' Nhap so tien gui');
+           let newtietkiem =new SoTietKiem(newMaSo,newLoaiTietKiem,newHoTen,newChungMinh,newNgayMoSo,newSoTienGui);
+           arr[value] = newtietkiem;
+           hienThi(arr);
+       }
+       function add(){
+           let taoMaSo = prompt('Nhập ma so :');
+           let taoLoaiTietKiem = prompt('Nhập loai:');
+           let taoHoTen = prompt('Nhập ten:');
+           let taoChungMinh = prompt('nhap chung minh');
+           let taoNgayMo = prompt('nhap ngay');
+           let taoSoTienGui = prompt('nhap so tien');
+
+           let newThem = new SoTietKiem( taoMaSo,taoLoaiTietKiem,taoHoTen,taoChungMinh,taoNgayMo, taoSoTienGui);
+           arr.push(newThem);
+           hienThi(arr);
+       }
+
+
+
+</script>
+   <style>
+       *{
+           font-family: arial, sans-serif;
+       }
+       table {
+           border-collapse: collapse;
+           width: 50%;
+       }
+
+       td, th {
+           border: 1px solid #dddddd;
+           text-align: left;
+           padding: 20px;
+       }
+
+       tr:nth-child(even) {
+           background-color: #dddddd;
+       }
+   </style>
+
+
+</body>
+</html>
