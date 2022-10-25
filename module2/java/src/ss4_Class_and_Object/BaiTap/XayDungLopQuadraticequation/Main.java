@@ -11,12 +11,7 @@ public class Main {
 //        double b = sc.nextDouble();
 //        System.out.println(" Enter a  number C :");
 //        double c = sc.nextDouble();
-//        QuadraticEquation quadraticEquation = new QuadraticEquation(a,b,c);
-//        QuadraticEquation quadraticEquation = new QuadraticEquation(2, -3, -5);
-//        System.out.println(quadraticEquation);
-//        System.out.println("The equation has to root");
-//        System.out.println();
-//        System.out.println();
+
         QuadraticEquation quadraticEquation = new QuadraticEquation(2, -3, -5);
         System.out.println(quadraticEquation);
     }
